@@ -1,0 +1,52 @@
+/*
+
+        Jesse Miller
+        COP4813 Assignment 4
+        06/18/2025
+
+
+*/
+   
+   
+   #mainWindow {
+        display: flex;
+        justify-content: center;
+    }
+    .top {
+        display: inline-table;
+        width: 5.7em;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mainList {
+        display: flex;
+        justify-content: center;
+        height: 8em;
+    }
+
+    .subs {
+        list-style: none;
+        margin-left: 0.5em;
+        padding: 0em;
+    }
+    
+     @media only screen and (max-width: 480px){
+    
+        #mainList {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            margin-left: 0em;
+            padding: 0em;
+        }
+        button {
+            width: 100%;
+        }
+        nav {
+            width: 100%;
+        }
+     }
