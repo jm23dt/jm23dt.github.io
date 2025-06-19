@@ -1,0 +1,24 @@
+    #mainWindow {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    img {
+        width: 20%;
+    }
+
+    #back {
+        text-decoration: none;
+        color: black;
+    }
+
+    #back:visited {
+        color: black;
+    }

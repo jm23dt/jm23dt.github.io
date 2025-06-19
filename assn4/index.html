@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<!--
+        Jesse Miller
+        COP4813 Assignment 4
+        06/18/2025
+-->
+
+<html lang="en">
+<head>
+<title>Assignment 4: Nested Menu Navigation Webpage</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link href="index_styles.css" rel="stylesheet" />
+
+<style>
+
+    #mainWindow {
+        display: flex;
+        justify-content: center;
+    }
+    .top {
+        display: inline-table;
+        width: 5.7em;
+    }
+
+    header {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mainList {
+        display: flex;
+        justify-content: center;
+        height: 8em;
+    }
+
+    .subs {
+        list-style: none;
+        margin-left: 0.5em;
+        padding: 0em;
+    }
+    
+     @media only screen and (max-width: 480px){
+    
+        #mainList {
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            margin-left: 0em;
+            padding: 0em;
+        }
+        button {
+            width: 100%;
+        }
+        nav {
+            width: 100%;
+        }
+     }
+
+</style>
+
+</head>
+<body>
+    <header><span class="emoji">&#x1F603;</span>Select Your Subject<span class="emoji">&#x1F603;</span></header>
+  
+   
+
+    <nav>
+   <ul id="mainList">
+    <li class="top">
+        <button onclick = "display('subMenu1','subMenu2', 'subMenu3')">Football</button>
+        <ul id="subMenu1" class="subs" style="display: none;">
+            <li><a href="foot_nfl.html">NFL</a></li>
+            <li><a href="foot_ufl.html">UFL</a></li>
+            <li><a href="foot_ncaa.html">NCAA</a></li>
+            <li><a href="foot_hs.html">High School</a></li>
+        </ul>
+    </li>
+        <li class="top">
+        <button onclick = "display('subMenu2', 'subMenu1', 'subMenu3')">Baseball</button>
+        <ul id="subMenu2" class="subs" style="display: none;">
+            <li><a href="base_mlb.html">MLB</a></li>
+            <li><a href="base_milb.html">MILB</a></li>
+            <li><a href="base_ncaa.html">NCAA</a></li>
+            <li><a href="base_hs.html">High School</a></li>
+        </ul>
+    </li>
+        <li class="top">
+        <button onclick = "display('subMenu3', 'subMenu1', 'subMenu2')">Basketball</button>
+        <ul id="subMenu3" class="subs" style="display: none;">
+            <li><a href="bask_nba.html">NBA</a></li>
+            <li><a href="bask_g.html">G League</a></li>
+            <li><a href="bask_ncaa.html">NCAA</a></li>
+            <li><a href="bask_hs.html">High School</a></li>
+        </ul>
+    </li>
+</ul>
+
+    </nav>
+
+
+ <div id="mainWindow">
+    <p>
+        Welcome to my navigation demo.
+        
+    </p>
+ </div>
+
+
+
+</body>
+</html>
+
+<script>
+
+function display(buttIn, close1, close2){
+    let elementIn = document.getElementById(buttIn);
+    let out1 = document.getElementById(close1);
+    let out2 = document.getElementById(close2);
+    if (elementIn.style.display == "none")
+    {
+        elementIn.style.display = "block";
+        out1.style.display = "none";
+        out2.style.display = "none";
+    }
+    else
+        elementIn.style.display = "none";
+}
+
+
+</script>
